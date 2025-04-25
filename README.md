@@ -54,7 +54,7 @@ Improve accessibility (ARIA tags, color contrast)
 Thanks to everyone who supported me on my web development journey! Feedback is always welcome. 😊
 
 📬 Connect With Me
-LinkedIn: Vaibhav Gupta
+LinkedIn: [Vaibhav Gupta](https://www.linkedin.com/in/vaibhav-gupta-5404ba302/)
 
 GitHub: VaibhavGupta-1
 
