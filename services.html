@@ -1,181 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Vaibhav Gupta - Services offered in Android development, UI/UX App design, and more.">
-<title>Services | Vaibhav Gupta</title>
-<style>
-    :root {
-    --primary-color: #0ef;
-    --background-color: #081b29;
-    --text-color: #ededed;
-    --card-bg-color: #112240;
-    }
-    body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    }
-    .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    }
-    header {
-    text-align: center;
-    padding: 20px 0;
-    }
-    header h1 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin: 0;
-    }
-    header p {
-    color: var(--text-color);
-    font-size: 1.2rem;
-    margin: 10px 0 0;
-    }
-    .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-    }
-    .service-card {
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: var(--text-color);
-    cursor: pointer;
-    }
-    .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 255, 255);
-    }
-    .service-card h3 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin: 0 0 10px;
-    }
-    .service-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    }
-    footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px 0;
-    color: var(--text-color);
-    }
-    footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-    }
-    footer a:hover {
-    text-decoration: underline;
-    }
-    /* Modal Styles */
-    .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    }
-    .modal-content {
-    background-color: var(--card-bg-color);
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    position: relative;
-    }
-    .modal-content h3 {
-    color: var(--primary-color);
-    }
-    .modal-content label {
-    display: block;
-    margin: 10px 0 5px;
-    }
-    .modal-content input, .modal-content textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    }
-    .modal-content button {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    }
-    .modal-content button:hover {
-    background-color: #08c;
-    }
-    .modal-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services offered by Vaibhav Gupta in Android development, UI/UX implementation, and full-stack mobile solutions.">
+    <title>Services | Vaibhav Gupta</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0ef;
+            --background-color: #081b29;
+            --text-color: #ededed;
+            --card-bg-color: #0a1f3c; /* Darker card background */
+            --border-color: rgba(0, 238, 255, 0.3);
+        }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif; /* Matching font with portfolio */
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+        header h1 {
+            color: var(--text-color);
+            font-size: 3rem;
+            margin: 0;
+        }
+        header h1 span {
+            color: var(--primary-color);
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #ccc;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 238, 255, 0.15);
+            border-color: var(--primary-color);
+        }
+        .service-card .icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin: 0 0 15px;
+            color: #fff;
+        }
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: var(--card-bg-color);
+            padding: 30px;
+            border-radius: 10px;
+            border-top: 5px solid var(--primary-color);
+            width: 90%;
+            max-width: 500px;
+            text-align: left;
+            position: relative;
+        }
+        .modal-content h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .modal-content label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 500;
+            color: #ccc;
+        }
+        .modal-content input, .modal-content textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            box-sizing: border-box; /* Important for padding */
+        }
+        .modal-content input:focus, .modal-content textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        .modal-content button[type="submit"] {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            padding: 12px 25px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .modal-content button[type="submit"]:hover {
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+        .modal-content .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <header>
-    <h1>My Services</h1>
-    <p>Delivering quality solutions tailored to your needs.</p>
+        <h1>My <span>Services</span></h1>
+        <p>Providing high-quality, modern solutions for your mobile application needs.</p>
     </header>
     <div class="services-grid">
-        <div class="service-card" data-service="Android Development">
-            <h3>Android Development</h3>
-            <p>Building intuitive and high-performing mobile applications using Kotlin and Jetpack Compose, tailored to enhance user experience.</p>
+        <div class="service-card" data-service="Custom Android App Development">
+            <i class="fas fa-mobile-alt icon"></i>
+            <h3>Custom Android App Development</h3>
+            <p>Building scalable, high-performance Android apps from scratch using Kotlin, Jetpack Compose, and modern architecture like MVVM.</p>
         </div>
-        <div class="service-card" data-service="UI/UX App Design">
-            <h3>UI/UX App Design</h3>
-            <p>Creating user-centric, visually appealing designs for mobile and web applications, focusing on a seamless user experience.</p>
+        <div class="service-card" data-service="Modern UI/UX Implementation">
+            <i class="fas fa-palette icon"></i>
+            <h3>Modern UI/UX Implementation</h3>
+            <p>Translating complex designs into responsive, intuitive, and dynamic user interfaces with Jetpack Compose and Material Design 3.</p>
         </div>
-        <div class="service-card" data-service="Data Analysis">
-            <h3>Data Analysis</h3>
-            <p>Utilizing data science techniques to analyze data, generate insights, and build data-driven solutions for business growth.</p>
+        <div class="service-card" data-service="Offline-First Architecture">
+            <i class="fas fa-database icon"></i>
+            <h3>Offline-First Architecture</h3>
+            <p>Developing robust, offline-capable applications using Room DB for local persistence, ensuring a seamless user experience without connectivity.</p>
         </div>
-        <div class="service-card" data-service="Open Source Contributions">
-            <h3>Open Source Contributions</h3>
-            <p>Contributing to and collaborating on impactful open-source projects to create meaningful software solutions for the community.</p>
+        <div class="service-card" data-service="API Integration & Backend Services">
+            <i class="fas fa-cogs icon"></i>
+            <h3>API Integration & Backend Services</h3>
+            <p>Integrating custom REST APIs and connecting your app to backend services like Firebase or a WordPress backend for real-time data sync.</p>
         </div>
-        <div class="service-card" data-service="Technical Consulting">
-            <h3>Technical Consulting</h3>
-            <p>Offering expertise in project planning, optimization, and development strategies to ensure successful execution of your ideas.</p>
+        <div class="service-card" data-service="App Modernization & Maintenance">
+            <i class="fas fa-wrench icon"></i>
+            <h3>App Modernization & Maintenance</h3>
+            <p>Refactoring legacy code, migrating to modern technologies like Kotlin/Compose, and providing ongoing support and feature updates.</p>
         </div>
-        <div class="service-card" data-service="Custom Solutions">
-            <h3>Custom Solutions</h3>
-            <p>Providing tailored software and technical solutions designed specifically to meet your unique requirements and goals.</p>
+        <div class="service-card" data-service="Full-Stack Mobile Solutions">
+            <i class="fas fa-layer-group icon"></i>
+            <h3>Full-Stack Mobile Solutions</h3>
+            <p>Delivering complete, end-to-end solutions that cover everything from the Android client to backend setup and API management.</p>
         </div>
     </div>
     <footer>
-        <p>© 2024 Vaibhav Gupta | <a href="index.html">Home</a> | <a href="index.html#contact-form">Contact</a></p>
+        <p>© 2024 Vaibhav Gupta | <a href="index.html">Back to Portfolio</a></p>
     </footer>
 </div>
 
@@ -184,14 +218,15 @@
     <div class="modal-content">
         <button class="close" onclick="closeModal()">×</button>
         <h3 id="modalTitle"></h3>
-        <form>
+        <form action="https://formspree.io/f/xjkklqaw" method="POST">
+            <input type="hidden" name="service_request" id="serviceRequestInput">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Submit</button>
+            <label for="message">Project Details:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Please describe your project or requirements..." required></textarea>
+            <button type="submit">Send Inquiry</button>
         </form>
     </div>
 </div>
@@ -199,11 +234,13 @@
 <script>
     const modal = document.getElementById("serviceModal");
     const modalTitle = document.getElementById("modalTitle");
+    const serviceRequestInput = document.getElementById("serviceRequestInput");
 
     document.querySelectorAll(".service-card").forEach(card => {
         card.addEventListener("click", () => {
             const serviceName = card.getAttribute("data-service");
-            modalTitle.textContent = `Enquire About ${serviceName}`;
+            modalTitle.textContent = `Inquiry: ${serviceName}`;
+            serviceRequestInput.value = serviceName; // Set hidden input value for the form
             modal.style.display = "flex";
         });
     });
